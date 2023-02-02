@@ -1,3 +1,7 @@
 const Name = "maicol";
 
-console.log(Name);
+console.log(Name)
+
+const great = (Name) => {
+  console.log(`hello ${Name}`)
+}
