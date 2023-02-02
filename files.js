@@ -12,6 +12,10 @@ fs.readFile('./docs/blog.txt', (err, data) => {
 
 //write 
 
+fs.writeFile('./docs/blog.txt', 'hello again', () => {
+    console.log('done writing')
+})
+
 
 //directories
 
