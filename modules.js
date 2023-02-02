@@ -1,3 +1,3 @@
-const zxy = require("./people");
+const {age} = require("./people");
 
-console.log(zxy)
+console.log(age)

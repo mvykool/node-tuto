@@ -1,3 +1,7 @@
 const people = ["yoshi", "ryu", "chun-li"];
 
-module.exports = people;
+const age = [4, 5, 8]
+
+module.exports = {
+    people, age
+};
