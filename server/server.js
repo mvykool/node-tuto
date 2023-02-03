@@ -5,9 +5,9 @@ const server = http.createServer((req, res) => {
 
 
     //set header conttent type to get res
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'text/html');
 
-    res.write('hello yall');
+    res.write('<h1>hey everyone</h1>');
     res.end();
 });
 
