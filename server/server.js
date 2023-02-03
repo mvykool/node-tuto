@@ -8,6 +8,7 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/plain');
 
     res.write('hello yall');
+    res.end();
 });
 
 server.listen(3000, 'localhost', () => {
