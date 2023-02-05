@@ -9,6 +9,9 @@ const server = http.createServer((req, res) => {
     //set header conttent type to get res
     res.setHeader('Content-Type', 'text/html');
 
+
+    //switch case for basic routing
+
     let path = './views/';
 
     switch (req.url) {
