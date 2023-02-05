@@ -23,8 +23,8 @@ app.get('/about', (req, res) => {
     res.redirect('/about');
  })
 
- //404 page
+ //404 page MUST BE AT THE BOTTOM
 
  app.use((req,res) => {
-    res.sendFile('./views/404.html', { root: __dirname});
+    res.status(404).sendFile('./views/404.html', { root: __dirname});
  })
