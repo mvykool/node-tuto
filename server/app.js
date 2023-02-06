@@ -34,7 +34,7 @@ app.get('/add-blog', (req, res) => {
   }) 
 
   blog.save()
-   .then(() => {
+   .then((result) => {
     res.send(result);
    })
    .catch((err) => {
