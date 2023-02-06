@@ -11,7 +11,8 @@ const app = express();
 //database
 
 
-const dbid = 'mongodb+srv://maicol01230:maicol01230@cluster0.zf4vms9.mongodb.net/node-tuto?retryWrites=true&w=majority';
+const dbid = 'mongodb+srv://maicol01230:maicol01230@cluster0.zf4vms9.mongodb.net/?retryWrites=true&w=majority';
+
 
 
 mongoose.connect(dbid, {useNewUrlParser: true, useUnifiedTopology: true})
