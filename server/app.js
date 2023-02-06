@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const Blog = require('./models/blog.js');
 
 
 // express app
@@ -15,11 +16,31 @@ const dbid = 'mongodb+srv://maicol01230:maicol01230@cluster0.zf4vms9.mongodb.net
 
 
 
-mongoose.connect(dbid, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(dbid)
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err))
 
-// listen for requests
+mongoose.set('strictQuery', true);
+
+
+
+// mongo and mongoose sandbox
+
+app.get('/add-blog', (req, res) => {
+  const blog = new Blog({
+     title: 'new blog',
+     snippet: 'about my new blog',
+     body: 'text'
+  }) 
+
+  blog.save()
+   .then(() => {
+    res.send(result);
+   })
+   .catch((err) => {
+    console.log(err)
+   });
+});
 
 
 
