@@ -1,10 +1,25 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+
 
 // express app
 const app = express();
 
+
+
+//database
+
+
+const dbid = 'mongodb+srv://maicol01230:maicol01230@cluster0.zf4vms9.mongodb.net/node-tuto?retryWrites=true&w=majority';
+
+
+mongoose.connect(dbid, {useNewUrlParser: true, useUnifiedTopology: true})
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err))
+
 // listen for requests
-app.listen(3000);
+
 
 
 //middleware of static
