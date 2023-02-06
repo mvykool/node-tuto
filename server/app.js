@@ -43,6 +43,18 @@ app.get('/add-blog', (req, res) => {
 });
 
 
+//get all the blogs
+
+app.get('/all-blogs', (req, res) => {
+  Blog.find()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
 
 //middleware of static
 
