@@ -100,6 +100,18 @@ app.post('/blogs', (req, res) => {
 });
 
 
+app.get('/blogs/create', (req, res) => {
+  res.render('create', { title: 'Create a new blog' });
+});
+
+// 404 page
+app.use((req, res) => {
+  res.status(404).render('404', { title: '404' });
+});
+
+
+//go to individual page
+
 app.get('/blogs/:id', (req,res) => {
   const id = req.params.id;
   Blog.findById(id)
@@ -110,13 +122,3 @@ app.get('/blogs/:id', (req,res) => {
       console.log(err)
     })
 })
-
-
-app.get('/blogs/create', (req, res) => {
-  res.render('create', { title: 'Create a new blog' });
-});
-
-// 404 page
-app.use((req, res) => {
-  res.status(404).render('404', { title: '404' });
-});
