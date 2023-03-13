@@ -10,7 +10,7 @@ fs.readFile('./docs/blog.txt', (err, data) => {
    console.log(data.toString());
 });
 
-//write 
+//write  
 
 fs.writeFile('./docs/blog.txt', 'hello again', () => {
     console.log('done writing')
